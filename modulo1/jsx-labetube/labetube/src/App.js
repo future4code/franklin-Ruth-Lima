@@ -27,7 +27,7 @@ function App() {
                     <li className="botoes-meunu-vertical">Histórico</li>
                 </ul>
             </nav>
-
+            
             <section className="painel-de-videos">
                 <div className="box-pagina-principal media1" onClick={reproduzVideo}>
                     <img src="https://picsum.photos/400/400?a=1 " alt="" />
