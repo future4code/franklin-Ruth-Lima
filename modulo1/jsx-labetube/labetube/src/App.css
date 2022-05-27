@@ -11,14 +11,24 @@ body {
   flex-direction: column;
 }
 
+
 header {
-  background-color: orange;
+  background-color: #202020;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   padding: 0 50px;
   height: 10%;
+  color: #FFF;
 }
+
+.busca {
+  justify-content: center;
+  width: 50vh;
+  height: 25px;
+  margin-left: 30%;
+}
+
 
 main {
   min-height: 80%;
@@ -26,6 +36,8 @@ main {
 }
 
 .menu-vertical {
+  color: #FFF;
+  background-color: #202020;
   flex-basis: 200px;
   border-right-style: solid;
   border-right-width: thin;
@@ -36,6 +48,8 @@ main {
 }
 
 .painel-de-videos {
+  background-color:#181818;
+  color: #FFF;
   padding-left: 20px;
   padding-top: 20px;
   flex-grow: 1;
@@ -97,8 +111,8 @@ main {
 
 
 footer {
-  height: 10%;
-  background-color: grey;
+  height: 3%;
+  background-color: #4C4C4C;
   margin: 0;
   padding: 0;
   display: flex;
