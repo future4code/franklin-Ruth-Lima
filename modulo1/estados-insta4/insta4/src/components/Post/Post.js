@@ -9,6 +9,7 @@ import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
 const PostContainer = styled.div`
+  background-color: #E7E7E7;
   border: 1px solid gray;
   width: 300px;
   margin-bottom: 10px;
@@ -42,41 +43,45 @@ const PostPhoto = styled.img`
 
 function Post(props){
   const [state, setState] = useState({
-    curtido: false,
-    numeroCurtidas: 0,
-    comentando: false,
-    numeroComentarios: 0
+    /*curtido: false,*/
+    /*numeroCurtidas: 0,*/
+    /*comentando: false,*/
+    /*numeroComentarios: 0*/
   })
 
-  const [numeroCurtidas, setnumeroCurtidas] = useState (3)
-  const [curtido, setCurtido] = useState(true)
+  const [numeroCurtidas, setNumeroCurtidas] = useState (0)
+  const [curtido, setCurtido] = useState(false)
   const [comentando, setComentando] = useState(true)
-  const [numeroComentarios, setNumeroComentarios] = useState(2)
+  const [numeroComentarios, setNumeroComentarios] = useState(0)
 
   const onClickCurtida = () => {
-    console.log('Curtiu!')
+    setNumeroCurtidas(numeroCurtidas + 1)
   }
+
+  let iconeCurtida
+    if(setCurtido) {
+      iconeCurtida = iconeCoracaoPreto
+    } else {
+      iconeCurtida = iconeCoracaoBranco
+    }
+ 
   
-  const onClickComentario = () => {
-    setComentando(!comentando)
+  const handleOnClickComentario = (event) => {
+   
+    setComentando (event.target.value)
     if(comentando) {
       componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+    }else{
+      
     }
     console.log(comentando)
   }
   
   const aoEnviarComentario = () => {
-    setComentando(false)
+    setComentando(true)
     setNumeroComentarios(numeroComentarios + 1)
   }
-
-  let iconeCurtida
-
-    if(curtido) {
-      iconeCurtida = iconeCoracaoPreto
-    } else {
-      iconeCurtida = iconeCoracaoBranco
-    }
+  
 
     let componenteComentario
 
@@ -97,12 +102,12 @@ function Post(props){
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
-          valorContador={state.numeroCurtidas}
+          valorContador={numeroCurtidas}
         />
 
         <IconeComContador
           icone={iconeComentario}
-          onClickIcone={onClickComentario}
+          onClickIcone={handleOnClickComentario}
           valorContador={numeroComentarios}
         />
       </PostFooter>
