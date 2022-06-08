@@ -40,7 +40,11 @@ function App() {
   return (
     <div className="App">
       {renderizaEtapa()}
-      <button onClick={irParaProximaEtapa}>Próxima etapa</button>
+      
+      {
+        etapaState < 4 ? 
+        <button onClick={irParaProximaEtapa}>Próxima etapa</button> : " "
+        }
     </div>
   );
 }
