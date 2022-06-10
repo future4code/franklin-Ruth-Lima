@@ -32,28 +32,30 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [filtro, setFiltro] = useState("completas", "pendentes")
     
-  useEffect() => {
-    () => {
-      
+  useEffect(() => {
+    criaTarefa(); 
+    const storedTarefa = localStorage.setItem("tarefas")
     },
     []
-  };
+  );
 
-  useEffect() => {
-    () => {
-
-    },
-    []
-  };
+  useEffect(() => { 
+    selectTarefa()
+    const storedTarefa = localStorage.getItem("tarefas")
+  }
+   ,
+    [setTarefa]
+ );
 
   onChangeInput = (event) => {
     setInputValue(event.target.value)
   }
 
   criaTarefa = () => {
+    localStorage.setItem("tarefas", tarefas)
     const novaTarefa = {
       id: Date.now(),
-      texto: tarefas,
+      texto: {tarefas},
       completa: false
     }
 
@@ -62,7 +64,16 @@ function App() {
   }
 
   selectTarefa = (id) => {
-
+    const storedTarefa = localStorage.getItem("tarefas")
+    const alteraTarefa = tarefas.map((tarefa) => {
+      if(id === tarefa.id) {
+        const novaTarefa = {
+          ...tarefa,
+          tarefa: !tarefa.id
+        }
+        return novaTarefa
+      }
+    })
   }
 
   onChangeFilter = (event) => {
