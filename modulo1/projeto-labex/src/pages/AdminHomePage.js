@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from 'react';
 
 function AdminHomePage() {
+    const navigate = useNavigate()
+
+    const voltarParaHome = () => {
+        navigate('/login')
+    }
     return(
         <div>
             <h1>Painel do Administrador</h1>
-            <button>Voltar</button>
+            <button onClick={voltarParaHome}>Voltar</button>
             <button>Criar Viagem</button>
             <button>Logout</button>
             
