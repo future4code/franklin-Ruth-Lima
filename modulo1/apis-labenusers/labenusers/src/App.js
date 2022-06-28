@@ -1,10 +1,12 @@
+
+import { Router } from './routes/Router';
 import './App.css';
-import axios from 'axios';
+
 
 function App() {
   return (
     <div className="App">
-     
+     <Router/>
     </div>
   );
 }
