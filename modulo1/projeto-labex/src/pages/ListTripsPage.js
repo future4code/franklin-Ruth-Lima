@@ -16,6 +16,7 @@ function ListTripsPage() {
  
     return(
         <div>
+            <p>viagens</p>
            <button onClick={voltarParaHome}>voltar</button>
            <button onClick={irParaFormularioDeAplicacao}>inscrever-se</button>
         </div>
