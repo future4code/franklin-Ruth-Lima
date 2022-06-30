@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export const useProtectedPage = () => {
+
     useEffect(() => {
         const token = localStorage.getItem('token')
         const navigate = useNavigate
@@ -12,6 +13,7 @@ export const useProtectedPage = () => {
             navigate('/login')
         }
     } , [])
+    
 }
 
 
@@ -31,6 +33,8 @@ function TripDetailsPage() {
             console.log('deu erro: ',error.response)
         })
     }, [])
+
+   
 
     return(
         //mostrar a list trip que for acessada, os candidatos pendentes e os candidatos aprovados (lista)

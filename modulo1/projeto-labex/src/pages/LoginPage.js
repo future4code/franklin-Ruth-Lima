@@ -19,6 +19,10 @@ function LoginPage() {
 
     const navigate = useNavigate()
 
+    const voltarParaHome = () => {
+        navigate('/')
+    }
+
     const irParaAdminPage = () => {
         console.log(email, senha);
         const body = {
@@ -33,11 +37,12 @@ function LoginPage() {
         }).then((response) => {
             console.log('deu certo: ', response.data.token);
             localStorage.setItem('token', response.data.token)
+            navigate('/admin/trips/list')
         }).catch((error) => {
             console.log('deu erro: ',error)
         })
-        navigate('/admin/trips/list')
-
+        
+        
     }
 
 
@@ -46,7 +51,7 @@ function LoginPage() {
             <h1>Login</h1>
             <input placeholder='E-mail' value={email} onChange={handleInputEmail}/>
             <input placeholder='senha' value={senha} onChange={handleInputSenha}/>
-            <button >voltar</button>
+            <button onClick={voltarParaHome}>voltar</button>
             <button onClick={irParaAdminPage}>Entrar</button>
 
         </div>

@@ -7,14 +7,19 @@ function AdminHomePage() {
 
     const navigate = useNavigate()
 
-    const voltarParaHome = () => {
-        navigate('/admin/trips/create')
+    const voltarParaHomePage = () => {
+        navigate('/login')
+    }
+
+    const verDetalhesdaViagem = () => {
+        navigate('/admin/trips/:id')
     }
     return(
         <div>
             <h1>Painel do Administrador</h1>
-            <button onClick={voltarParaHome}>Voltar</button>
+            <button onClick={voltarParaHomePage}>Voltar</button>
             <button>Criar Viagem</button>
+            <button onClick={verDetalhesdaViagem}>Ver Viagem</button>
             <button>Logout</button>
             
         </div>
