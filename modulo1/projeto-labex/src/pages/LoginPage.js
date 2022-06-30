@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom';
 
 
 function LoginPage() {
+
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
 
@@ -36,7 +37,9 @@ function LoginPage() {
             console.log('deu erro: ',error)
         })
         navigate('/admin/trips/list')
+
     }
+
 
     return(
         <div>
@@ -45,6 +48,7 @@ function LoginPage() {
             <input placeholder='senha' value={senha} onChange={handleInputSenha}/>
             <button >voltar</button>
             <button onClick={irParaAdminPage}>Entrar</button>
+
         </div>
     )
 }

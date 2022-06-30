@@ -8,7 +8,7 @@ function AdminHomePage() {
     const navigate = useNavigate()
 
     const voltarParaHome = () => {
-        navigate('/login')
+        navigate('/admin/trips/create')
     }
     return(
         <div>
