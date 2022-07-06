@@ -1,14 +1,13 @@
 import { createTheme } from '@mui/material/styles';
-import {corPrincipal, corNeutra} from "./colors"
 
 const theme = createTheme({
   palette: {
     primary: {
-        main: corPrincipal,
+        main: "#f21d1d",
         contrastText: "white"
   },
   text: {
-      primary: corNeutra
+      primary: "#FFF"
   }
 }
 })

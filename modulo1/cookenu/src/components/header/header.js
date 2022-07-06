@@ -1,29 +1,26 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import { StyledToolbar } from './styled';
 import Button from '@mui/material/Button';
+import { StyledToolbar } from "./styled";
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
-    const navigate = useNavigate()
+ const Header = () => {
+   const navigate = useNavigate()
 
-    const handleLogin = () => {
-        navigate('/')
-    }
-
-    const handleListaDeReceitas = () => {
-        navigate('/lista/receitas')
-    }
+   const vaParaListaDeReceitas = () => {
+      navigate('/lista/receitas')
+   }
 
   return (
       <AppBar position="static">
         <StyledToolbar>
-          <Button onClick={handleListaDeReceitas} color="inherit">Cookenu</Button>
-          <Button onClick={handleLogin} color="inherit">Login</Button>
+          <Button onClick={vaParaListaDeReceitas} color="inherit">
+            Cookenu
+          </Button>
+          <Button color="inherit">Login</Button>
         </StyledToolbar>
       </AppBar>
-    
   );
 }
 
-export default Header
+export default Header 
