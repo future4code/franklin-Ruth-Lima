@@ -79,5 +79,44 @@ e) `SELECT id, nome from Actor where id = "002";`
 
 ### Exercicio 4 
 
+`SELECT * from Actor WHERE (name LIKE "A%" or name LIKE "J%") AND salary > 300000;`
+
+a) essa query esta me retornando atores(a) que comecem com a letra A ou J, no caso foi retornado Antonia Fagundes e Juliana Paes.
+e que tenha o salario acima de 300000.
+
+b) `SELECT * from Actor WHERE (name NOT LIKE "A%") AND salary > 350000;`
+c) `SELECT * from Actor WHERE (name LIKE "%G%" or name LIKE "%g%");`
+d) `SELECT * from Actor WHERE (name LIKE "%A%" or "%a%" or "%G%" or "%g%") AND salary BETWEEN 350000 and 9000000;`
+
+### Exercicio 5
+
+a) ```
+CREATE TABLE Movies (
+id VARCHAR(255) PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+synopsis TEXT NOT NULL, 
+release_date DATE NOT NULL,
+rating INT NOT NULL
+)
+ ```
+ -- Essa query retorna as informações sobre os filmes escolhidos, ela mostra uma id unica, o nome do filme, a sinopse, a data de laçamento e a avaliação do filme que pode ir de 0 a 10.
+
+### Exercicio 6 
+
+ a) SELECT id, title, rating from Movies where id = "003";
+ b) SELECT * FROM Movies where title = "Orgulho e Preconceito";
+ c) SELECT id, tilte, synopsis from Movie where rating > 7;
+
+### Exercicio 7
+
+a) SELECT * FROM Movie where title = "%vida*";
+b) SELECT * FROM Movie where title LIKE "%TERMO DE BUSCA%" or synopsis LIKE "%TERMO DE BUSCA%";
+c) SELECT * FROM Movie where release_date < "2022-08-17";
+d) SELECT * FROM Movie where release_date < "2022-08-17" AND (title LIKE "%TERMO DE BUSCA%" OR synopsis LIKE "%TERMO DE BUSCA%") AND rating > 7;
+
+
+
+
+
 
 
