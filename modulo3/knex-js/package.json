@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./build/index.js",
-    "dev-start": "ts-node-dev ./src/index.ts"
+    "dev": "ts-node-dev ./src/index.ts",
+    "start": "tsc && node ./build/index.js"
   },
-  "author": "Labenu",
+  "author": "Ruth-Lima",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
-    "knex": "^0.95.2",
+    "knex": "^2.3.0",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
