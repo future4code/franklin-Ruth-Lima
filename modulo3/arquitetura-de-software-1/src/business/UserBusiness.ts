@@ -1,3 +1,9 @@
+import UserDatabase from "../database/UserDatabase"
+import { User } from "../model/User"
+import Authenticator, { ITokenPayload } from "../services/Authenticator"
+import { HashManager } from "../services/HashManager"
+import { IdGenerator } from "../services/IdGenerator"
+
 export default class UserBusiness {
     public signup = async (input: any) => {
         const name = input.name
@@ -15,5 +21,37 @@ export default class UserBusiness {
         if(!email.includes('@')){
             throw new Error("Email invàlido")
         }
+
+        const idGenerator = new IdGenerator()
+        const id = idGenerator.generateId()
+
+        const hashManager = new HashManager()
+        const hashPassword = await hashManager.hash(password)
+
+        const user = new User(
+            id,
+            name,
+            email,
+            hashPassword
+        )
+
+        const userDatabase = new UserDatabase()
+        await userDatabase.createUser(user)
+
+
+        const payload: ITokenPayload = {
+            id: user.getId(),
+            role: user.getRole()
+        }
+
+        const authenticator = new Authenticator()
+        const token = authenticator.generateToken(payload)
+
+        const response = {
+            token
+        }
+
+        return response
     } 
-}
+
+ }

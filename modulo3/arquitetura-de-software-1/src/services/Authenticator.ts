@@ -1,23 +1,34 @@
 import * as jwt from "jsonwebtoken"
 import { authenticationData } from "../types"
+import { USER_ROLES } from '../model/User'
+
+export interface ITokenPayload {
+    id: string,
+    role: USER_ROLES
+}
 
 export default class Authenticator {
     generateToken = (payload: authenticationData) => {
        return jwt.sign(
             payload,
-            "senhaSuperSegura",
+            process.env.JWT_KEY as string,
             {
-                expiresIn: "5h"
+                expiresIn: process.env.JWT_EXPIRES_IN
             }
         )
     }
 
-    getTokenData = (token: string) => {
-        const tokenData = jwt.verify (
-            token, "senhaSuperSegura"
-        )
+    getTokenPayload = (token: string): ITokenPayload | null => {
+        try {
+            const payload = jwt.verify(
+                token,
+                process.env.JWT_KEY as string
+            )
 
-        return tokenData
+            return payload as ITokenPayload
+        } catch (error) {
+            return null
+        }
     }
 
 }
