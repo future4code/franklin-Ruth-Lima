@@ -1,15 +1,20 @@
-import knex from "knex";
-import dotenv from "dotenv";
+export type User = {
+	nome: string,
+	saldo: number
+}
 
-dotenv.config();
 
-const connection = knex({
-  client: "mysql",
-  connection: {
-    host: process.env.DB_HOST,
-    port: Number(process.env.DB_PORT || "3306"),
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-  },
-});
+
+export function performPurchase(user: User, value: number): User | undefined {
+    if(user.saldo >= value) {
+        user.saldo= user.saldo - value
+        return user
+            
+}
+    if(user.saldo < value){
+        return undefined
+    }
+  
+}
+
+
