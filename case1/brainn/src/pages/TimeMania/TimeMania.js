@@ -1,13 +1,12 @@
 import React from 'react'
-import { LogoTimemania } from './styled'
 import logoTimeMania from '../../assets/Timemania.png'
-import { ScreenContainerHeader } from '../../styles/globals'
+import { Logo, NameStyle, ScreenContainerHeader } from '../../styles/globals'
 
 const TimeMania = () => {
     return(
         <ScreenContainerHeader category='TimeMania'>
-            <LogoTimemania src={logoTimeMania} alt=''/>
-            <p>Timemania</p>
+            <Logo src={logoTimeMania} alt=''/>
+            <NameStyle>TIMEMANIA</NameStyle>
         </ScreenContainerHeader>
     )
 }

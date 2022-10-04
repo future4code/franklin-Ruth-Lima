@@ -1,13 +1,12 @@
 import React from 'react'
-import { LogoLotoMania } from './styled'
 import logoLotoMania from '../../assets/logo-lotomania.png'
-import { ScreenContainerHeader } from '../../styles/globals'
+import { Logo, NameStyle, ScreenContainerHeader } from '../../styles/globals'
 
 const LotoMania = () => {
     return(
         <ScreenContainerHeader category='LotoMania'>
-            <LogoLotoMania src={logoLotoMania} alt=''/>
-            <p>Lotomania</p>
+            <Logo src={logoLotoMania} alt=''/>
+            <NameStyle>LOTOMANIA</NameStyle>
         </ScreenContainerHeader>
     )
 }
