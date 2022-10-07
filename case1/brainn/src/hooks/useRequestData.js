@@ -16,7 +16,7 @@ const useRequestData = ( url) => {
         })
     },[url])
 
-    return(data)
+    return data
 }
 
 export default useRequestData

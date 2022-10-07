@@ -2,16 +2,17 @@ import styled from "styled-components"
 
 
 export const ScreenContainerHeader = styled.div`
-@media screen and (max-width: 524px) {
-    
+@media screen and (max-width: 700px) {
+    position: relative;
     width: 100%;
-    height: 701.83px;
+    height: 569px;
     
 } 
-@media screen and (min-width: 525px) {
+
+@media screen and (min-width: 701px) {
     position: absolute;
-    width: 613px;
-    height: 1080px;
+    width: 38%;
+    height: 100%;
     left: 0%;
     right: 61.69%;
     top: 0%;
@@ -29,17 +30,17 @@ background:  ${ props => props.category === 'MegaSena' ? '#6BEFA3'
 `
 
 export const NameStyle = styled.p`
-@media screen and (max-width: 524px){
+@media screen and (max-width: 700px){
     position: absolute;
     width: 192px;
     height: 37px;
     left: 31.68%;
     right: 31.68%;
-    top: 30.12%;
-    bottom: 65.78%;
+    top: 42.5%;
+   
 }
 
-@media screen and (min-width: 525px){
+@media screen and (min-width: 701px){
     position: absolute;
     width: 245.17px;
     height: 32.98px;
@@ -59,17 +60,17 @@ export const NameStyle = styled.p`
 `
 
 export const Logo = styled.img`
-@media screen and (max-width: 524px) {
+@media screen and (max-width: 700px) {
     position: absolute;
     width: 63.98px;
     height: 62.4px;
     left: 43.91%;
     right: 43.88%;
-    top: 21.9%;
-    bottom: 71.19%;
+    top: 34.75%;
+    
 }
 
-@media screen and (min-width: 525px) {
+@media screen and (min-width: 701px) {
     position: relative;
     width: 59.29px;
     height: 55.31px;
@@ -80,3 +81,80 @@ export const Logo = styled.img`
 }
 
 ` 
+export const Body = styled.section`
+
+overflow: hidden;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+
+@media screen and (max-width: 700px) {
+
+    position: absolute;
+    width: 100%;
+    height: 465px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:before{
+            content: '';
+            position : absolute ;
+            top : 0 ;
+            left : 0 ;
+            width : 100% ;
+            height : 100% ;
+            border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+            transform: scaleX(1.5);
+            background: #EFEFEF;
+    }
+    
+}
+
+@media screen and (min-width: 701px) {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 71%;
+    
+
+    &:before{
+            content: '';
+            position : absolute ;
+            top : 0 ;
+            left : 0 ;
+            width : 100% ;
+            height : 100% ;
+            border-radius: 20% 0 0 20% / 50% 0 0 50%;
+            transform: scaleY(1.5);
+            background: #EFEFEF;
+    }
+
+}
+` 
+
+export const NumeroContainer = styled.div`
+
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+`
+
+export const NumeroStyle = styled.p`
+    font-family: 'Montserrat';
+    color: black;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.38px;
+   
+`
+
+
