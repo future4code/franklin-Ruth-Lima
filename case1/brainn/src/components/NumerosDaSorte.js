@@ -1,23 +1,22 @@
 import React from "react";
-import { BASE_URL } from "../constants/urls";
-import useRequestData from "../hooks/useRequestData";
-import { NumeroContainer, NumeroStyle } from "../styles/globals";
+import { NumeroContainer, NumeroStyle, NumerosContainer } from "../styles/globals";
 
 
 
-export const NumerosdaSorte = () => {
-    
-    const data = useRequestData(`${BASE_URL}/concursos/2359`)
+export const NumerosdaSorte = (props) => {
 
     return(
         <>
-           {data?.numeros.map((numero) => {
-            return (<NumeroContainer>
+           <NumerosContainer>        
+           {props.concurso?.numeros.map((numero) => {
+            return (
+                    <NumeroContainer>
                         <NumeroStyle>
                             {numero}
                         </NumeroStyle>
                     </NumeroContainer>)
            })}
+           </NumerosContainer>
         </>
     )
     

@@ -19,15 +19,38 @@ export const ScreenContainerHeader = styled.div`
     bottom: 0%;
 }
 
-background:  ${ props => props.category === 'MegaSena' ? '#6BEFA3'
-                 : props.category  === 'Quina' ? ' #8666EF '
-                 : props.category ===  'LotoFacil' ? ' #DD7AC6 '
-                 : props.category ===  'LotoMania' ? ' #FFAB64 '
-                 : props.category ===  'TimeMania' ? ' #5AAD7D '
-                 : props.category ===  'DiaDeSorte' ? ' #BFAF83 '
+background:  ${ props => props.category === 'mega-sena' ? '#6BEFA3'
+                 : props.category  === 'quina' ? ' #8666EF '
+                 : props.category ===  'lotofácil' ? ' #DD7AC6 '
+                 : props.category ===  'lotomania' ? ' #FFAB64 '
+                 : props.category ===  'timemania' ? ' #5AAD7D '
+                 : props.category ===  'dia de sorte' ? ' #BFAF83 '
                  : 'white' };
     
 `
+
+export const BoxSelect = styled.div`
+    @media screen and (max-width: 700px) {
+        position: absolute;
+        width: 233px;
+        height: 51px;
+        left: 27.67%;
+        right: 27.86%;
+        top: 6.98%;
+        bottom: 87.38%;
+    }
+
+
+    @media screen and (min-width: 701px) {
+        position: absolute;
+        width: 215.91px;
+        height: 45.2px;
+        left: 15%;
+        right: 80.51%;
+        top: 8.52%;
+        bottom: 87.3%;
+    }
+` 
 
 export const NameStyle = styled.p`
 @media screen and (max-width: 700px){
@@ -85,18 +108,19 @@ export const Body = styled.section`
 
 overflow: hidden;
 display: flex;
-flex-direction: row;
+flex-direction: column;
 align-items: center;
 justify-content: center;
+
 
 @media screen and (max-width: 700px) {
 
     position: absolute;
     width: 100%;
-    height: 465px;
+    min-height: 465px;
     bottom: 0;
     display: flex;
-    flex-wrap: wrap;
+    
 
     &:before{
             content: '';
@@ -114,6 +138,8 @@ justify-content: center;
 
 @media screen and (min-width: 701px) {
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     right: 0;
     height: 100%;
     width: 71%;
@@ -133,18 +159,42 @@ justify-content: center;
 
 }
 ` 
+export const NumerosContainer = styled.div`
+
+z-index: 1;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+overflow: hidden;
+@media screen and (min-width: 701px) {
+    min-width: 100%;
+    
+}
+
+`
 
 export const NumeroContainer = styled.div`
 
-    width: 76px;
-    height: 76px;
     border-radius: 50%;
     background-color: #FFFFFF;
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3%;
+    @media screen and (max-width: 701px) {
+    width: 76px;
+    height: 76px;
+    margin: 14px;
+}
+    
+ @media screen and (min-width: 701px) {
+    width: 111px;
+    height: 106px;
+    margin: 20px;
+}
+
 `
 
 export const NumeroStyle = styled.p`
@@ -152,9 +202,87 @@ export const NumeroStyle = styled.p`
     color: black;
     font-style: normal;
     font-weight: 700;
+@media screen and (max-width: 701px) {
     font-size: 20px;
     line-height: 24.38px;
+    }
+@media screen and (min-width: 701px) {
+    font-weight: 700;
+   font-size: 27px;
+   line-height: 32.91px;
+}
    
 `
 
+export const ConcursoStyle = styled.p`
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
 
+    @media screen and (max-width: 700px){
+    position: absolute;
+    left: 36.07%;
+    right: 36.26%;
+    top: 65%;
+
+
+    }
+
+    @media screen and (min-width: 701px){
+    position: absolute;
+    width: 150px;
+    left: 18%;
+    right: 84.83%;
+    top: 86.76%;
+    bottom: 11.84%;
+    }
+    
+`
+
+export const TextoFinal = styled.footer`
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    z-index: 1;
+  
+
+    @media screen and (max-width: 700px){
+    max-width: 400px;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    
+    }
+
+    @media screen and (min-width: 701px){
+    position: absolute;
+    width: 650px;
+    bottom: 10%;
+    }
+`
+
+export const DataConcurso = styled.p`
+@media screen and (max-width: 700px) {
+    opacity: 0;
+    
+}
+@media screen and (min-width: 701px) {
+    opacity: 1;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    
+}
+
+`

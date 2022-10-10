@@ -5,13 +5,12 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { goToDiaDeSorte, goToLotoFacil, goToLotoMania, goToMegaSena, goToQuina, goToTimeMania } from '../routes/coordinator';
 import { useNavigate } from 'react-router-dom';
-import useRequestData from '../hooks/useRequestData';
-import { BASE_URL } from '../constants/urls';
+import { BoxSelect } from '../styles/globals';
 
 
-export default function BasicSelect() {
+export default function BasicSelect(props) {
  const navigate = useNavigate()
-  const data = useRequestData(`${BASE_URL}/loterias`)
+  
   
   const navigatePages = (id) => {
     if(id === 0) {
@@ -35,33 +34,27 @@ export default function BasicSelect() {
   }
 
   return (
-    <Box sx={{
-      position: 'absolute',
-      width:'233px',
-      height:'53px',
-      left: '27.7%',
-      top: '6.97%',
-      bottom: '87.38%'
-        }}>
-      <FormControl fullWidth >
-        <Select
-        sx={{
-          borderColor: 'white',
-          backgroundColor:'white', 
-          borderRadius: 2
-        }}
-          id="demo-simple-select"
-          placeholder='mega-sena'
-         
-        >
-          {data?.map((loteria) => {
-            return( 
-              <MenuItem key={loteria.id} onClick={navigatePages(loteria.id)}>{loteria.nome.toUpperCase()}</MenuItem>
-            )
-          })}
-        
-        </Select>
-      </FormControl>
-    </Box>
+    <BoxSelect>
+      <Box>
+        <FormControl fullWidth >
+          <Select
+          sx={{
+            borderColor: 'white',
+            backgroundColor:'white', 
+            borderRadius: 2
+          }}
+            id="demo-simple-select"
+            placeholder='mega-sena'
+          >
+            {props.loterias?.map((loteria) => {
+              return( 
+                <MenuItem key={loteria.id} onClick={navigatePages(loteria.id)}>{loteria.nome.toUpperCase()}</MenuItem>
+              )
+            })}
+          
+          </Select>
+        </FormControl>
+      </Box>
+    </BoxSelect>
   );
 }
