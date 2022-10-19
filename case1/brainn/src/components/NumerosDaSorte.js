@@ -4,13 +4,14 @@ import { NumeroContainer, NumeroStyle, NumerosContainer } from "../styles/global
 
 
 export const NumerosdaSorte = (props) => {
+    var key = 0
 
     return(
         <>
            <NumerosContainer>        
            {props.concurso?.numeros.map((numero) => {
             return (
-                    <NumeroContainer>
+                    <NumeroContainer key={key += 1}>
                         <NumeroStyle>
                             {numero}
                         </NumeroStyle>

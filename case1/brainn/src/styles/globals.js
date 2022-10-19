@@ -214,7 +214,7 @@ export const NumeroStyle = styled.p`
    
 `
 
-export const ConcursoStyle = styled.p`
+export const ConcursoStyle = styled.div`
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
