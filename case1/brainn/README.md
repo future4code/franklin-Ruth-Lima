@@ -1,70 +1,57 @@
 # Case - Brainn
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto de conclusão de curso que tem como objetivo a construção de uma aplicação web front-end que mostre os Resultados das Loterias quando selecionada a opção desejada.
 
-## Available Scripts
+## 🚀 Descrição do Projeto
 
-In the project directory, you can run:
+Apresentar a problemática para o desenvolvimento da solução, assim como dar um breve resumo do seu projeto.
 
-### `npm start`
+## 📋 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As documentações utilizadas no projeto foram:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Layout: https://www.figma.com/file/H2qrYBCFMf4didYmxRwTxP/Brainn-Frontend-Challenge
+- API: https://brainn-api-loterias.herokuapp.com (atualmente fora do ar)
+- Tipografia (webfont): Montserrat
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O que funciona dos requisitos pedidos:
 
-### `npm run build`
+- A aplicação terá que suportar 6 sorteios: Mega-sena, Quina, Lotofácil, Lotomania, Timemania e Dia de sorte :white_check_mark:  
+- Todos esses sorteios estarão em um combo-box/select ✅
+- Ao mudar esse combo-box, terá que mudar o tema do sorteio, número do sorteio, data do sorteio e números sorteados ✅
+- A aplicação terá que ser responsiva, pelo menos para celulares, conforme layout ✅
+- O consumo da API pode ser feito via REST ou GraphQL ✅
+- Criar rotas com React Router DOM (opcional) ✅
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔧 Getting Started / Configurações de Ambiente / Setup / Instalação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O que será necessário para executar seu projeto na máquina de outra pessoa
 
-### `npm run eject`
+```
+Dar exemplos
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tecnologias Utilizadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* [React](https://pt-br.reactjs.org/)
+* [JavaScript](https://www.javascript.com/)
+* [Styled-components](https://styled-components.com/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## ✒️ Autores
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## INTEGRANTE
+Perfil      | Link do perfil no GITHUB
+--------- | ------
+[<img src="https://avatars.githubusercontent.com/Rtpessoa" width="75px;"/>](https://github.com/franklin-Ruth-Lima) | [Ruth Pessoa](https://github.com/franklin-Ruth-Lima)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Link do surge: https://hanging-mailbox.surge.sh/
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
