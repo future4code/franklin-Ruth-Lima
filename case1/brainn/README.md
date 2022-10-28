@@ -25,13 +25,12 @@ O que funciona dos requisitos pedidos:
 - Criar rotas com React Router DOM (opcional) ✅
 
 
-### 🔧 Getting Started / Configurações de Ambiente / Setup / Instalação
+### 🔧 Getting Started 
 
 O que será necessário para executar seu projeto na máquina de outra pessoa
 
-```
-Dar exemplos
-```
+- npm install 
+- npm run start 
 
 ## 🛠️ Tecnologias Utilizadas
 
